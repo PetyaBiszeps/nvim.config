@@ -10,26 +10,14 @@ install_macos() {
     tree-sitter-cli
 }
 
-install_omarchy() {
-  echo "==> Installing packages for Omarchy"
-
-  omarchy pkg add \
-    neovim \
-    tree-sitter-cli
-}
-
 case "$(uname -s)" in
   Darwin)
     install_macos
     ;;
 
   Linux)
-    if command -v omarchy >/dev/null 2>&1; then
-      install_omarchy
-    else
-      echo "Unsupported Linux distribution"
-      exit 1
-    fi
+    echo "Linux is not supported yet"
+    exit 1
     ;;
 
   *)
