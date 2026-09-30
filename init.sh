@@ -10,5 +10,8 @@ sh "$NVIM_CONFIG_DIR/scripts/download.sh"
 echo "==> Applying Neovim config"
 sh "$NVIM_CONFIG_DIR/scripts/apply.sh"
 
+echo "==> Running healthcheck"
+sh "$NVIM_CONFIG_DIR/scripts/healthcheck.sh"
+
 echo "==> Done"
 
