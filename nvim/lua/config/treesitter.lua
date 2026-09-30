@@ -1,10 +1,8 @@
 local langs = require("langs")
 local treesitter = require("nvim-treesitter")
 
-local install_dir = vim.fs.joinpath(vim.fn.stdpath("data"), "site")
-
 treesitter.setup({
-  install_dir = install_dir
+  install_dir = vim.fs.joinpath(vim.fn.stdpath("data"), "site")
 })
 treesitter.install(langs.parsers):wait(300000)
 
