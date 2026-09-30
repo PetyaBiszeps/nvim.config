@@ -1,7 +1,7 @@
 local langs = require("langs")
 local treesitter = require("nvim-treesitter")
 
-treesitter.install(langs.parsers)
+treesitter.install(langs.parsers):wait(300000)
 
 vim.api.nvim_create_autocmd("FileType", {
   callback = function(args)
