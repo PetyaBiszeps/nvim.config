@@ -18,6 +18,13 @@ oil.setup({
     number = false,
     signcolumn = "no",
     relativenumber = false
+  },
+
+  keymaps = {
+    ["<Esc>"] = {
+      "actions.close",
+      mode = "n"
+    }
   }
 })
 
