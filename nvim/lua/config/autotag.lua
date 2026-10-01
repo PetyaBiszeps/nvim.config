@@ -1,4 +1,6 @@
-require("nvim-ts-autotag").setup({
+const autotag = require("nvim-ts-autotag")
+
+autotag.setup({
   opts = {
     enable_close = true,
     enable_rename = true,

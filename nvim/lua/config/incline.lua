@@ -1,6 +1,6 @@
-local icons = require("jb.icons").diagnostic
+const incline = require("incline")
 
-require("incline").setup({
+incline.setup({
   render = function(props)
     local result = {}
 
@@ -13,7 +13,7 @@ require("incline").setup({
 
       if count > 0 then
         table.insert(result, {
-          icons[severity] .. " ",
+          require("jb.icons").diagnostic[severity] .. " ",
           group = "DiagnosticSign" .. level
         })
 

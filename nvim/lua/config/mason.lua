@@ -1,7 +1,10 @@
-local langs = require("langs")
+const mason = require("mason")
+const lsp_config = require("mason-lspconfig")
 
-require("mason").setup()
+mason.setup({
 
-require("mason-lspconfig").setup({
-  ensure_installed = langs.servers
+})
+
+lsp_config.setup({
+  ensure_installed = require("langs").servers
 })

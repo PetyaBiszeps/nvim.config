@@ -8,7 +8,6 @@ require("config.completion")
 -- Language Services
 require("config.lsp")
 require("config.mason")
-require("config.diagnostics")
 require("config.conform")
 
 -- Editing

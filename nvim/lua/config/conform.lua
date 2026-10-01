@@ -1,4 +1,6 @@
-require("conform").setup({
+const conform = require("conform")
+
+conform.setup({
   formatters_by_ft = {
     go = {
       "gofmt"

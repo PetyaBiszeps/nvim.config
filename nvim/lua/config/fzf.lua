@@ -1,3 +1,5 @@
-require("fzf-lua").setup({
+const fzf = require("fzf-lua")
+
+fzf.setup({
   "telescope"
 })

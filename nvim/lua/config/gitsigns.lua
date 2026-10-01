@@ -1,15 +1,17 @@
-  require("gitsigns").setup({
-    current_line_blame = true,
+const gitsigns = require("gitsigns")
 
-    current_line_blame_opts = {
-      virt_text = true,
-      virt_text_pos = "eol",
-      delay = 400,
-      ignore_whitespace = false,
-      virt_text_priority = 100,
-      use_focus = true
-    },
+gitsigns.setup({
+  current_line_blame = true,
 
-    current_line_blame_formatter =
-      "<author>, <author_time:%d/%m/%Y>, <author_time:%H:%M> · <summary>"
-  })
+  current_line_blame_opts = {
+    delay = 400,
+    use_focus = true
+    virt_text = true,
+    virt_text_pos = "eol",
+    ignore_whitespace = false,
+    virt_text_priority = 100,
+  },
+
+  current_line_blame_formatter =
+    "<author>, <author_time:%d/%m/%Y>, <author_time:%H:%M> · <summary>"
+})

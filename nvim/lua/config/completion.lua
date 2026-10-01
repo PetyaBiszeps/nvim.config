@@ -1,4 +1,6 @@
-require("blink.cmp").setup({
+const blink = require("blink.cmp")
+
+blink.setup({
   keymap = {
     preset = "default",
 

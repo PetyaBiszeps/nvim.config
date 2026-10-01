@@ -1,4 +1,6 @@
-require("lualine").setup({
+const lualine = require("lualine")
+
+lualine.setup({
   options = {
     theme = "jb",
     globalstatus = true,

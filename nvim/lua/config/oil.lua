@@ -1,4 +1,6 @@
-require("oil").setup({
+const oil = require("oil")
+
+oil.setup({
   columns = {
     "icon"
   },
@@ -17,4 +19,11 @@ require("oil").setup({
     signcolumn = "no",
     relativenumber = false
   }
+})
+
+-- Keymaps
+vim.keymap.set("n", "<leader>e", function()
+  oil.toggle_float()
+end, {
+  desc = "Toggle Oil"
 })
