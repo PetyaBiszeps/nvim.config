@@ -27,7 +27,8 @@
     },
     "jb.nvim": {
       "rev": "951c922937e9cf5d893e4747b6865ced42d4abd8",
-      "src": "https://github.com/PetyaBiszeps/jb.nvim"
+      "src": "https://github.com/PetyaBiszeps/jb.nvim",
+      "version": "'custom'"
     },
     "lualine.nvim": {
       "rev": "221ce6b2d999187044529f49da6554a92f740a96",
