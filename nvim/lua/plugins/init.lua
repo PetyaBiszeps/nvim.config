@@ -6,8 +6,7 @@ vim.pack.add({
   -- Foundation
   {
     name = "jb.nvim",
-    src = "https://github.com/PetyaBiszeps/jb.nvim",
-    version = "custom"
+    src = "https://github.com/nickkadutskyi/jb.nvim"
   }, {
     name = "nvim-treesitter",
     src = "https://github.com/nvim-treesitter/nvim-treesitter"
