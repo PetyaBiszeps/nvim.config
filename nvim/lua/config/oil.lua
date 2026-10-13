@@ -26,6 +26,10 @@ oil.setup({
 
   keymaps = {
     ["<Tab>"] = "actions.preview",
+    ["<BS>"] = {
+      "actions.parent",
+      mode = "n"
+    },
     ["<Esc>"] = {
       "actions.close",
       mode = "n"
