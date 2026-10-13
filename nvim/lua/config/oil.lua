@@ -20,7 +20,12 @@ oil.setup({
     relativenumber = false
   },
 
+  view_options = {
+    show_hidden = true
+  },
+
   keymaps = {
+    ["<Tab>"] = "actions.preview",
     ["<Esc>"] = {
       "actions.close",
       mode = "n"
