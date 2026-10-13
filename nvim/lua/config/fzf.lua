@@ -16,3 +16,9 @@ vim.keymap.set("n", "<leader>g", function()
 end, {
   desc = "Live grep"
 })
+
+vim.keymap.set("n", "grr", function()
+  fzf.lsp_references()
+end, {
+  desc = "LSP references"
+})
