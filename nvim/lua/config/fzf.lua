@@ -12,7 +12,18 @@ end, {
 })
 
 vim.keymap.set("n", "<leader>g", function()
-  fzf.live_grep()
+  fzf.live_grep({
+    rg_opts = table.concat({
+      "--column",
+      "--line-number",
+      "--no-heading",
+      "--color=always",
+      "--smart-case",
+      "--max-columns=4096",
+      "--fixed-strings",
+      "-e"
+    }, " ")
+  })
 end, {
   desc = "Live grep"
 })
