@@ -62,6 +62,9 @@ vim.pack.add({
   }, {
     name = "incline.nvim",
     src = "https://github.com/b0o/incline.nvim"
+  }, {
+    name = "trouble.nvim",
+    src = "https://github.com/folke/trouble.nvim"
   },
 
   -- Navigation
