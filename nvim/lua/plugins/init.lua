@@ -12,7 +12,7 @@ vim.pack.add({
     src = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
 
-  -- Completion
+  -- Completion Engine
   {
     name = "blink.cmp",
     src = "https://github.com/Saghen/blink.cmp",
@@ -62,6 +62,9 @@ vim.pack.add({
   }, {
     name = "incline.nvim",
     src = "https://github.com/b0o/incline.nvim"
+  }, {
+    name = "which-key.nvim",
+    src = "https://github.com/folke/which-key.nvim"
   }, {
     name = "trouble.nvim",
     src = "https://github.com/folke/trouble.nvim"

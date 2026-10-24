@@ -22,6 +22,7 @@ require("config.diffview")
 require("config.icons")
 require("config.lualine")
 require("config.incline")
+require("config.whichkey")
 require("config.trouble")
 
 -- Navigation
