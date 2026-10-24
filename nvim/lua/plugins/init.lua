@@ -77,6 +77,9 @@ vim.pack.add({
   }, {
     name = "oil.nvim",
     src = "https://github.com/stevearc/oil.nvim"
+  }, {
+    name = "flash.nvim",
+    src = "https://github.com/folke/flash.nvim"
   },
 
   -- Notes
