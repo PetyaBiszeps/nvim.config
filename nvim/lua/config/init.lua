@@ -27,3 +27,6 @@ require("config.trouble")
 -- Navigation
 require("config.fzf")
 require("config.oil")
+
+-- Notes
+require("config.obsidian")

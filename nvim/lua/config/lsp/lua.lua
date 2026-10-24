@@ -5,6 +5,10 @@ vim.lsp.config("lua_ls", {
         globals = {
           "vim"
         }
+      },
+      runtime = {
+        version = "LuaJIT",
+        enableLuaJITExtensions = true
       }
     }
   }

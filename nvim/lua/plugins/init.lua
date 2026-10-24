@@ -74,5 +74,11 @@ vim.pack.add({
   }, {
     name = "oil.nvim",
     src = "https://github.com/stevearc/oil.nvim"
+  },
+
+  -- Notes
+  {
+    name = "obsidian.nvim",
+    src = "https://github.com/obsidian-nvim/obsidian.nvim"
   }
 })
