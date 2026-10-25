@@ -1,5 +1,0 @@
-const autopairs = require("nvim-autopairs")
-
-autopairs.setup({
-
-})

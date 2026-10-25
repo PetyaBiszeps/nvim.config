@@ -1,1 +1,3 @@
-vim.lsp.config("vtsls", {})
+vim.lsp.config("vtsls", {
+
+})

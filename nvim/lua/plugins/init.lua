@@ -5,86 +5,31 @@ end
 vim.pack.add({
   -- Foundation
   {
+    name = "mini.nvim",
+    src = "https://github.com/nvim-mini/mini.nvim"
+  }, {
     name = "jb.nvim",
     src = "https://github.com/nickkadutskyi/jb.nvim"
-  }, {
-    name = "nvim-treesitter",
-    src = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
 
-  -- Completion Engine
+  -- Package Manager
   {
-    name = "blink.cmp",
-    src = "https://github.com/Saghen/blink.cmp",
-    version = vim.version.range("1.*")
-  },
-
-  -- Language Services
-  {
-    name = "nvim-lspconfig",
-    src = "https://github.com/neovim/nvim-lspconfig"
-  }, {
     name = "mason.nvim",
     src = "https://github.com/mason-org/mason.nvim"
   }, {
     name = "mason-lspconfig.nvim",
     src = "https://github.com/mason-org/mason-lspconfig.nvim"
-  }, {
+  },
+
+  -- LSP
+  {
+    name = "nvim-lspconfig",
+    src = "https://github.com/neovim/nvim-lspconfig"
+  },
+
+  -- Formatting
+  {
     name = "conform.nvim",
     src = "https://github.com/stevearc/conform.nvim"
-  },
-
-  -- Editing
-  {
-    name = "nvim-autopairs",
-    src = "https://github.com/windwp/nvim-autopairs"
-  }, {
-    name = "nvim-ts-autotag",
-    src = "https://github.com/windwp/nvim-ts-autotag"
-  },
-
-  -- Git
-  {
-    name = "gitsigns.nvim",
-    src = "https://github.com/lewis6991/gitsigns.nvim"
-  }, {
-    name = "diffview.nvim",
-    src = "https://github.com/sindrets/diffview.nvim"
-  },
-
-  -- UI
-  {
-    name = "mini.icons",
-    src = "https://github.com/nvim-mini/mini.icons"
-  }, {
-    name = "lualine.nvim",
-    src = "https://github.com/nvim-lualine/lualine.nvim"
-  }, {
-    name = "incline.nvim",
-    src = "https://github.com/b0o/incline.nvim"
-  }, {
-    name = "which-key.nvim",
-    src = "https://github.com/folke/which-key.nvim"
-  }, {
-    name = "trouble.nvim",
-    src = "https://github.com/folke/trouble.nvim"
-  },
-
-  -- Navigation
-  {
-    name = "fzf-lua",
-    src = "https://github.com/ibhagwan/fzf-lua"
-  }, {
-    name = "oil.nvim",
-    src = "https://github.com/stevearc/oil.nvim"
-  }, {
-    name = "flash.nvim",
-    src = "https://github.com/folke/flash.nvim"
-  },
-
-  -- Notes
-  {
-    name = "obsidian.nvim",
-    src = "https://github.com/obsidian-nvim/obsidian.nvim"
   }
 })

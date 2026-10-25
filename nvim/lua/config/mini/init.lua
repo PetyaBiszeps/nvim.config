@@ -1,0 +1,5 @@
+require("config.mini.ui")
+require("config.mini.keymaps")
+require("config.mini.editing")
+require("config.mini.navigation")
+require("config.mini.completion")

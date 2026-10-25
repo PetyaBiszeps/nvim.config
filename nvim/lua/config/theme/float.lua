@@ -6,7 +6,7 @@ function M.setup()
     link = false
   })
 
-  for _, name in ipairs({ "NormalFloat", "FloatBorder" }) do
+  for _, name in ipairs({ "NormalFloat", "FloatBorder", "FloatTitle" }) do
     local hl = vim.api.nvim_get_hl(0, {
       name = name,
       link = false

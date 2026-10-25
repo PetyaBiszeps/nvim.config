@@ -6,8 +6,7 @@ install_macos() {
   echo "==> Installing packages for macOS"
 
   brew install \
-    neovim \
-    tree-sitter-cli
+    neovim
 }
 
 case "$(uname -s)" in

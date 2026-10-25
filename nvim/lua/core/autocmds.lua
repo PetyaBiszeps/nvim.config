@@ -1,5 +1,12 @@
+local group = vim.api.nvim_create_augroup("CoreAutocmds", {
+  clear = true
+})
+vim.cmd("filetype plugin indent on")
+
 -- System clipboard with y
 vim.api.nvim_create_autocmd("TextYankPost", {
+  group = group,
+
   callback = function()
     local event = vim.v.event
 

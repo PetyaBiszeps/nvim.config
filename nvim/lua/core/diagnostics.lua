@@ -1,29 +1,21 @@
-local group = vim.api.nvim_create_augroup("diagnostic_float", {
-  clear = true
-})
+vim.diagnostic.config({
+  underline = true,
+  virtual_text = false,
+  severity_sort = true,
 
-vim.api.nvim_create_autocmd("CursorHold", {
-  group = group,
+  signs = {
+    text = {
+      [1] = "E",
+      [2] = "W",
+      [3] = "I",
+      [4] = "H"
+    }
+  },
 
-  callback = function()
-    if vim.fn.pumvisible() ~= 0 then
-      return
-    end
-
-    vim.diagnostic.open_float({
-      scope = "cursor",
-      focusable = false,
-
-      header = false,
-      source = "if_many",
-      border = "rounded",
-
-      close_events = {
-        "CursorMoved",
-        "CursorMovedI",
-        "InsertEnter",
-        "BufHidden"
-      }
-    })
-  end
+  float = {
+    header = false,
+    border = "rounded",
+    source = "if_many"
+  },
+  update_in_insert = false
 })

@@ -1,6 +1,10 @@
 local M = {}
 
 function M.setup(ui2)
+  if not ui2.cmd then
+    return
+  end
+
   local function restore_cmdheight()
     vim._with({
       noautocmd = true
@@ -22,26 +26,15 @@ function M.setup(ui2)
       relative = "editor",
       anchor = "NW",
 
-      row = math.floor(vim.o.lines * 0.4),
+      row = math.floor(vim.o.lines * 0.38),
       col = math.floor((vim.o.columns - width) / 2),
 
       width = width,
       border = "rounded",
 
-      _cmdline_offset = 0
+      title = " cmdline ",
+      title_pos = "center"
     })
-
-    vim.wo[win].winhighlight =
-      "Normal:NormalFloat,FloatBorder:FloatBorder"
-
-    local pos = vim.fn.screenpos(win, 1, 1)
-
-    if pos.row > 0 then
-      vim.g.ui_cmdline_pos = {
-        pos.row,
-        pos.col - 1
-      }
-    end
   end
 
   local cmdline_show = ui2.cmd.cmdline_show
@@ -51,16 +44,6 @@ function M.setup(ui2)
 
     restore_cmdheight()
     style()
-  end
-
-  local cmdline_hide = ui2.cmd.cmdline_hide
-
-  ui2.cmd.cmdline_hide = function(...)
-    local result = cmdline_hide(...)
-
-    vim.g.ui_cmdline_pos = nil
-
-    return result
   end
 
   vim.api.nvim_create_autocmd("VimResized", {

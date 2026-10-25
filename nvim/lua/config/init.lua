@@ -1,34 +1,12 @@
 -- Foundation
+require("config.mini")
 require("config.theme")
-require("config.treesitter")
 
--- Completion
-require("config.completion")
-
--- Language Services
-require("config.lsp")
+-- Package Manager
 require("config.mason")
+
+-- Language services
+require("config.lsp")
+
+-- Formatting
 require("config.conform")
-
--- Editing
-require("config.autopairs")
-require("config.autotag")
-
--- Git
-require("config.gitsigns")
-require("config.diffview")
-
--- UI
-require("config.icons")
-require("config.lualine")
-require("config.incline")
-require("config.whichkey")
-require("config.trouble")
-
--- Navigation
-require("config.fzf")
-require("config.oil")
-require("config.flash")
-
--- Notes
-require("config.obsidian")
