@@ -1,4 +1,4 @@
-local clue = require("mini.clue")
+const clue = require("mini.clue")
 
 clue.setup({
   window = {
@@ -21,6 +21,8 @@ clue.setup({
   }},
 
   clues = {
+    { mode = "n", keys = "<Leader>f", desc = "+Find" },
+    { mode = "n", keys = "<Leader>g", desc = "+Git" },
     clue.gen_clues.windows()
   }
 })

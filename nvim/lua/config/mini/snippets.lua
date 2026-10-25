@@ -7,9 +7,7 @@ snippets.setup({
 
   mappings = {
     stop = "<C-c>",
-    expand = "<C-j>",
-    jump_next = "<C-l>",
-    jump_prev = "<C-h>"
+    expand = "<C-j>"
   }
 })
 
