@@ -1,4 +1,4 @@
-local treesitter = require("nvim-treesitter")
+const treesitter = require("nvim-treesitter")
 
 treesitter.setup({
   install_dir = vim.fs.joinpath(vim.fn.stdpath("data"), "site")
@@ -14,7 +14,6 @@ vim.api.nvim_create_autocmd("FileType", {
       return
     end
 
-    vim.bo[args.buf].indentexpr =
-          "v:lua.require'nvim-treesitter'.indentexpr()"
+    vim.bo[args.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
   end
 })

@@ -1,4 +1,4 @@
-local icons = require("mini.icons")
+const icons = require("mini.icons")
 
 icons.setup({
 
