@@ -3,7 +3,21 @@ local pick = require("mini.pick")
 local extra = require("mini.extra").pickers
 local git = require("mini.git")
 local diff = require("mini.diff")
-local notes = require("config.mini.notes")
+
+-- Keep native completion semantics: Tab selects, Enter only accepts a selection.
+-- Snippet jumping uses C-l / C-h so it never steals indentation or menu keys.
+vim.keymap.set("i", "<Tab>", function()
+  return vim.fn.pumvisible() == 1 and "<C-n>" or "<Tab>"
+end, { expr = true, desc = "Next completion or indent" })
+vim.keymap.set("i", "<S-Tab>", function()
+  return vim.fn.pumvisible() == 1 and "<C-p>" or "<S-Tab>"
+end, { expr = true, desc = "Previous completion" })
+vim.keymap.set("i", "<CR>", function()
+  if vim.fn.pumvisible() == 1 and vim.fn.complete_info().selected ~= -1 then
+    return "<C-y>"
+  end
+  return MiniPairs.cr()
+end, { expr = true, desc = "Accept selected completion or newline" })
 
 map("n", "<leader>e", function()
   local files = require("mini.files")
@@ -30,7 +44,6 @@ map("n", "<leader>fc", function()
   pick.builtin.files({}, { source = { cwd = vim.fn.stdpath("config") } })
 end, { desc = "Configuration files" })
 
-map("n", "<leader>bd", function() require("mini.bufremove").delete() end, { desc = "Delete buffer (keep splits)" })
 map("n", "<leader>ls", function() extra.lsp({ scope = "document_symbol" }) end, { desc = "Document symbols" })
 map("n", "<leader>lw", function() extra.lsp({ scope = "workspace_symbol_live" }) end, { desc = "Workspace symbols" })
 map("n", "grr", function() extra.lsp({ scope = "references" }) end, { desc = "LSP references (picker)" })
@@ -51,24 +64,6 @@ map("n", "<leader>gq", function()
   vim.cmd.copen()
 end, { desc = "Loaded buffer hunks to quickfix" })
 
-map("n", "<leader>nd", notes.daily, { desc = "Daily Markdown note" })
-map("n", "<leader>nf", function() notes.pick(false) end, { desc = "Find notes" })
-map("n", "<leader>ns", function() notes.pick(true) end, { desc = "Search notes" })
-map("n", "<leader>nw", notes.workspace, { desc = "Choose notes workspace" })
-map("n", "<leader>ss", function()
-  vim.ui.input({ prompt = "Session name: " }, function(name)
-    if not name or name == "" then return end
-    if name:find("[/\\]") or name == "." or name == ".." then
-      vim.notify("Use a session name, not a path.", vim.log.levels.WARN)
-      return
-    end
-    require("mini.sessions").write(name)
-  end)
-end, { desc = "Save named session (no overwrite)" })
-map("n", "<leader>sl", function() require("mini.sessions").select("read") end, { desc = "Load session" })
-map("n", "<leader>sd", function() require("mini.sessions").select("delete") end, { desc = "Delete inactive session" })
-
 map("n", "<leader>ql", function() extra.list({ scope = "location" }) end, { desc = "Location list" })
 map("n", "<leader>qf", function() extra.list({ scope = "quickfix" }) end, { desc = "Quickfix picker" })
 map("n", "<leader>un", function() MiniNotify.show_history() end, { desc = "Notification history" })
-map("n", "<leader>ux", function() require("mini.trailspace").trim() end, { desc = "Trim trailing whitespace" })

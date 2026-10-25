@@ -1,3 +1,10 @@
+const completion = require("mini.completion")
+
+vim.lsp.config("*", {
+  capabilities = completion.get_lsp_capabilities()
+})
+
+-- Imports
 require("config.lsp.go")
 require("config.lsp.js")
 require("config.lsp.php")
