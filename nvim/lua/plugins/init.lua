@@ -8,6 +8,9 @@ vim.pack.add({
     name = "mini.nvim",
     src = "https://github.com/nvim-mini/mini.nvim"
   }, {
+    name = "nvim-treesitter",
+    src = "https://github.com/nvim-treesitter/nvim-treesitter"
+  }, {
     name = "jb.nvim",
     src = "https://github.com/nickkadutskyi/jb.nvim"
   },

@@ -3,7 +3,7 @@ local group = vim.api.nvim_create_augroup("CoreAutocmds", {
 })
 vim.cmd("filetype plugin indent on")
 
--- System clipboard with y
+-- System clipboard with Y
 vim.api.nvim_create_autocmd("TextYankPost", {
   group = group,
 

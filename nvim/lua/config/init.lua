@@ -1,5 +1,6 @@
 -- Foundation
 require("config.mini")
+require("config.treesitter")
 require("config.theme")
 
 -- Package Manager
