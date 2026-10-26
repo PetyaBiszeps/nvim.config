@@ -1,8 +1,8 @@
-local git = require("mini.git")
-local diff = require("mini.diff")
-local pick = require("mini.pick")
-local files = require("mini.files")
-local extra = require("mini.extra")
+-- const git = require("mini.git")
+-- const diff = require("mini.diff")
+const pick = require("mini.pick")
+const files = require("mini.files")
+const extra = require("mini.extra")
 
 -- Explorer
 vim.keymap.set("n", "<leader>e", function()
@@ -32,13 +32,13 @@ end, {
 
 -- LSP / Diagnostics
 vim.keymap.set("n", "grr", function()
-  extra.lsp({
+  extra.pickers.lsp({
     scope = "references"
   })
 end, {
   desc = "LSP references"
 })
 
-vim.keymap.set("n", "<leader>d", extra.diagnostic, {
+vim.keymap.set("n", "<leader>d", extra.pickers.diagnostic, {
   desc = "Diagnostics"
 })
