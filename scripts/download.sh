@@ -26,4 +26,3 @@ case "$(uname -s)" in
 esac
 
 echo "==> Done"
-

@@ -14,4 +14,3 @@ echo "==> Running healthcheck"
 sh "$NVIM_CONFIG_DIR/scripts/healthcheck.sh"
 
 echo "==> Done"
-
