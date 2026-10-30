@@ -18,4 +18,3 @@ mkdir -p "$(dirname "$DEST")"
 ln -s "$SRC" "$DEST"
 
 echo "Linked: $DEST -> $SRC"
-
