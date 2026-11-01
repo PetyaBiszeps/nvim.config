@@ -39,5 +39,9 @@ blink.setup({
     default = {
       "lsp", "path", "snippets", "buffer"
     }
+  },
+
+  cmdline = {
+    enabled = false
   }
 })

@@ -3,7 +3,7 @@ const treesitter = require("nvim-treesitter")
 treesitter.setup({
   install_dir = vim.fs.joinpath(vim.fn.stdpath("data"), "site")
 })
-treesitter.install(require("langs").parsers):wait(300000)
+treesitter.install(require("langs").parsers)
 
 -- Init treesitter
 vim.api.nvim_create_autocmd("FileType", {

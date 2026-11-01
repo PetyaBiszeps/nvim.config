@@ -1,5 +1,7 @@
 -- Foundation
 require("config.theme")
+require("config.notify")
+require("config.noice")
 require("config.treesitter")
 
 -- Completion

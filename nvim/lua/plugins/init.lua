@@ -54,6 +54,15 @@ vim.pack.add({
 
   -- UI
   {
+    name = "nui.nvim",
+    src = "https://github.com/MunifTanjim/nui.nvim"
+  }, {
+    name = "nvim-notify",
+    src = "https://github.com/rcarriga/nvim-notify"
+  }, {
+    name = "noice.nvim",
+    src = "https://github.com/folke/noice.nvim"
+  }, {
     name = "mini.icons",
     src = "https://github.com/nvim-mini/mini.icons"
   }, {
