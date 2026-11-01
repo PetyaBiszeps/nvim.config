@@ -42,6 +42,10 @@ blink.setup({
   },
 
   cmdline = {
-    enabled = false
+    completion = {
+      menu = {
+        auto_show = true
+      }
+    }
   }
 })

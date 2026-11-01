@@ -1,4 +1,4 @@
-local notify = require("notify")
+const notify = require("notify")
 
 notify.setup({
   stages = "fade_in_slide_out",

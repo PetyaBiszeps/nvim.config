@@ -12,13 +12,6 @@ vim.pack.add({
     src = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
 
-  -- Completion Engine
-  {
-    name = "blink.cmp",
-    src = "https://github.com/Saghen/blink.cmp",
-    version = vim.version.range("1.*")
-  },
-
   -- Language Services
   {
     name = "nvim-lspconfig",
@@ -36,11 +29,30 @@ vim.pack.add({
 
   -- Editing
   {
+    name = "blink.cmp",
+    src = "https://github.com/Saghen/blink.cmp",
+    version = vim.version.range("1.*")
+  }, {
     name = "nvim-autopairs",
     src = "https://github.com/windwp/nvim-autopairs"
   }, {
     name = "nvim-ts-autotag",
     src = "https://github.com/windwp/nvim-ts-autotag"
+  },
+
+  -- Navigation & Workspace
+  {
+    name = "fzf-lua",
+    src = "https://github.com/ibhagwan/fzf-lua"
+  }, {
+    name = "oil.nvim",
+    src = "https://github.com/stevearc/oil.nvim"
+  }, {
+    name = "flash.nvim",
+    src = "https://github.com/folke/flash.nvim"
+  }, {
+    name = "obsidian.nvim",
+    src = "https://github.com/obsidian-nvim/obsidian.nvim"
   },
 
   -- Git
@@ -77,23 +89,5 @@ vim.pack.add({
   }, {
     name = "trouble.nvim",
     src = "https://github.com/folke/trouble.nvim"
-  },
-
-  -- Navigation
-  {
-    name = "fzf-lua",
-    src = "https://github.com/ibhagwan/fzf-lua"
-  }, {
-    name = "oil.nvim",
-    src = "https://github.com/stevearc/oil.nvim"
-  }, {
-    name = "flash.nvim",
-    src = "https://github.com/folke/flash.nvim"
-  },
-
-  -- Notes
-  {
-    name = "obsidian.nvim",
-    src = "https://github.com/obsidian-nvim/obsidian.nvim"
   }
 })
