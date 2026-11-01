@@ -10,14 +10,21 @@ install_macos() {
     tree-sitter-cli
 }
 
+install_arch() {
+  echo "==> Installing packages for Arch Linux"
+
+  yay -S --needed --noconfirm --answerclean None --answerdiff None \
+    neovim \
+    tree-sitter-cli
+}
+
 case "$(uname -s)" in
   Darwin)
     install_macos
     ;;
 
   Linux)
-    echo "Linux is not supported yet"
-    exit 1
+    install_arch
     ;;
 
   *)
