@@ -39,5 +39,13 @@ blink.setup({
     default = {
       "lsp", "path", "snippets", "buffer"
     }
+  },
+
+  cmdline = {
+    completion = {
+      menu = {
+        auto_show = true
+      }
+    }
   }
 })
