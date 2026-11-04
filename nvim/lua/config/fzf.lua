@@ -11,7 +11,7 @@ end, {
   desc = "Find files"
 })
 
-vim.keymap.set("n", "<leader>g", function()
+vim.keymap.set("n", "<leader>sg", function()
   fzf.live_grep({
     rg_opts = table.concat({
       "--column",

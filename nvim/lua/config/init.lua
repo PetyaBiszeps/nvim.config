@@ -20,7 +20,7 @@ require("config.obsidian")
 
 -- Git
 require("config.gitsigns")
-require("config.diffview")
+require("config.diffbandit")
 
 -- UI
 require("config.notify")
