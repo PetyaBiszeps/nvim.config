@@ -69,6 +69,9 @@ vim.pack.add({
     name = "mini.icons",
     src = "https://github.com/nvim-mini/mini.icons"
   }, {
+    name = "barbar.nvim",
+    src = "https://github.com/romgrk/barbar.nvim"
+  }, {
     name = "lualine.nvim",
     src = "https://github.com/nvim-lualine/lualine.nvim"
   }, {

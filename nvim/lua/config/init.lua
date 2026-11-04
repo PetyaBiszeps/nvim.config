@@ -24,6 +24,7 @@ require("config.diffbandit")
 
 -- UI
 require("config.icons")
+require("config.barbar")
 require("config.lualine")
 require("config.incline")
 require("config.whichkey")
